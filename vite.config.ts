@@ -5,6 +5,7 @@ import svgr from 'vite-plugin-svgr';
 
 /** @type {import('vite').UserConfig} */
 export default {
+  base: '/nice_gadgets/',
   plugins: [react(), babel({ presets: [reactCompilerPreset()] }), svgr()],
   resolve: {
     alias: { '@': '/src' },
