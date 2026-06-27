@@ -5,6 +5,8 @@ import { Button } from '../../atoms/Button/Button';
 import 'swiper/css';
 import './ProductGallery.scss';
 
+const BASE = import.meta.env.BASE_URL;
+
 interface Props {
   images: string[];
   alt: string;
@@ -27,7 +29,7 @@ export const ProductGallery: FC<Props> = ({ images, alt }) => {
       >
         {images.map((image, index) => (
           <SwiperSlide key={image} className="gallery__slide">
-            <img decoding="async" src={`/${image}`} alt={`${alt} view ${index + 1}`} />
+            <img decoding="async" src={`${BASE}${image}`} alt={`${alt} view ${index + 1}`} />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -43,7 +45,7 @@ export const ProductGallery: FC<Props> = ({ images, alt }) => {
             onClick={() => mainSwiper?.slideTo(index)}
             aria-label={`Show ${alt} view ${index + 1}`}
           >
-            <img decoding="async" src={`/${image}`} alt={`${alt} thumbnail ${index + 1}`} />
+            <img decoding="async" src={`${BASE}${image}`} alt={`${alt} thumbnail ${index + 1}`} />
           </Button>
         ))}
       </div>
