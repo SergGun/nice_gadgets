@@ -6,6 +6,8 @@ import { Icon } from '../../atoms/Icon/Icon';
 import { notify } from '../../../utils/notify';
 import './CartItem.scss';
 
+const BASE = import.meta.env.BASE_URL;
+
 interface Props {
   item: CartItemType;
 }
@@ -35,7 +37,7 @@ export const CartItem: FC<Props> = ({ item }) => {
           <img
             className="cart-item__image"
             decoding="async"
-            src={`/${item.image}`}
+            src={`${BASE}${item.image}`}
             alt={item.name}
           />
         </Link>

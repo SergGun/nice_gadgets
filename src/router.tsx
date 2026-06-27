@@ -1,4 +1,4 @@
-import { Navigate, createBrowserRouter } from 'react-router-dom';
+import { Navigate, createHashRouter } from 'react-router-dom';
 import type { RouteObject } from 'react-router-dom';
 import { MainLayout } from './layouts/MainLayout/MainLayout';
 import { HomePage } from './pages/HomePage';
@@ -62,4 +62,4 @@ const routes: RouteObject[] = [
   },
 ];
 
-export const router = createBrowserRouter(routes);
+export const router = createHashRouter(routes);

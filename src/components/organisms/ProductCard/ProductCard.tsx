@@ -7,6 +7,8 @@ import { getValidSpecs } from '../../../utils/getValidSpecs';
 import type { Product } from '../../../types/Products';
 import './ProductCard.scss';
 
+const BASE = import.meta.env.BASE_URL;
+
 interface Props {
   product: Product;
 }
@@ -34,7 +36,7 @@ export const ProductCard: FC<Props> = ({ product }) => {
       <Link className="card__link" to={`/${product.category}/${product.itemId}`} tabIndex={-1}>
         <img
           className="card__image"
-          src={`/${product.image}`}
+          src={`${BASE}${product.image}`}
           decoding="async"
           alt={product.name}
         />

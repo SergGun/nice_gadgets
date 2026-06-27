@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
@@ -8,6 +7,8 @@ import { Button } from '../../atoms/Button/Button';
 import { Icon } from '../../atoms/Icon/Icon';
 import { type Product } from '../../../types/Products';
 import './SearchModal.scss';
+
+const BASE = import.meta.env.BASE_URL;
 
 export interface CategoryResult {
   items: Product[];
@@ -168,7 +169,7 @@ const CategorySection: React.FC<CategorySectionProps> = ({ title, result, onSele
           onClick={onSelect}
         >
           <img
-            src={`/${product.image}`}
+            src={`${BASE}${product.image}`}
             alt={product.name}
             className="search-modal__thumb"
             decoding="async"
