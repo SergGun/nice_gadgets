@@ -5,8 +5,7 @@ A modern e-commerce web application for browsing, searching, and purchasing the 
 ## Live Preview
 
 Check out the live version of the project here:  
-👉 [Nice Gadgets Deployed App](https://nice-gadgets-by-serggun.netlify.app/)  
-_(Note: If you have a different Netlify site URL, please update this link accordingly)_
+👉 [Nice Gadgets Deployed App](https://SergGun.github.io/nice_gadgets/)
 
 ## Design Reference
 
